@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <title>Desktop Pet Memo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PET VIEW ============ -->
+  <div id="pet-view" class="view pet-view">
+    <div id="pet" class="pet" title="左键互动/拖动，右键打开备忘录">
+      <!-- Speech bubble shows pending todo count -->
+      <div id="pet-bubble" class="pet-bubble hidden"></div>
+
+      <!-- A cute CSS/SVG slime-cat creature -->
+      <div class="pet-body">
+        <div class="pet-ear pet-ear-left"></div>
+        <div class="pet-ear pet-ear-right"></div>
+        <div id="petFace" class="pet-face">
+          <div class="pet-eye pet-eye-left"></div>
+          <div class="pet-eye pet-eye-right"></div>
+          <div class="pet-cheek pet-cheek-left"></div>
+          <div class="pet-cheek pet-cheek-right"></div>
+          <div class="pet-mouth"></div>
+        </div>
+        <div class="pet-shadow"></div>
+      </div>
+      <!-- <div class="pet-hint">✨</div>-->
+    </div>
+  </div>
+
+  <!-- ============ MEMO VIEW ============ -->
+  <div id="memo-view" class="view memo-view hidden">
+    <!-- Celebration overlay -->
+    <div id="celebration" class="celebration hidden"></div>
+    <div class="panel">
+      <header class="panel-header" id="memo-drag">
+        <span class="panel-title">📝 备忘录</span>
+        <div class="header-actions">
+          <button class="icon-btn" id="show-history-btn" title="历史备忘录">🕘</button>
+          <button class="icon-btn" id="back-to-pet-btn" title="回到宠物">🐾</button>
+          <button class="icon-btn close" id="memo-close-btn" title="关闭">✕</button>
+        </div>
+      </header>
+
+      <div class="add-row">
+        <input id="memo-input" type="text" maxlength="200" placeholder="添加一条备忘…回车确认" />
+        <button id="memo-add-btn" class="add-btn">＋</button>
+      </div>
+
+      <ul id="memo-list" class="memo-list"></ul>
+
+      <div id="memo-empty" class="empty-state hidden">
+        <div class="empty-emoji">🌱</div>
+        <p>还没有备忘，添加第一条吧！</p>
+      </div>
+
+      <footer class="panel-footer">
+        <span id="memo-counter">0 项</span>
+        <button id="clear-done-btn" class="text-btn">清除已完成</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ============ HISTORY VIEW ============ -->
+  <div id="history-view" class="view history-view hidden">
+    <div class="panel">
+      <header class="panel-header" id="history-drag">
+        <button class="icon-btn" id="history-back-btn" title="返回备忘录">←</button>
+        <span class="panel-title">🕘 历史备忘录</span>
+        <div class="header-actions">
+          <button class="icon-btn close" id="history-close-btn" title="关闭">✕</button>
+        </div>
+      </header>
+
+      <div id="history-list" class="history-list"></div>
+
+      <div id="history-empty" class="empty-state hidden">
+        <div class="empty-emoji">📭</div>
+        <p>暂时没有历史记录。</p>
+      </div>
+
+      <footer class="panel-footer">
+        <span id="history-counter">0 条记录</span>
+        <button id="clear-history-btn" class="text-btn danger">清空历史</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

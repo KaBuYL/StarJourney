@@ -1,0 +1,35 @@
+{
+  "name": "desktop-pet-memo",
+  "version": "1.0.0",
+  "description": "A desktop pet widget that transforms into a checkbox memo with history.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "pack-folder": "electron-builder --win --dir",
+    "pack-setup": "electron-builder --win"
+  },
+  "author": "KaBu.Lhz",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "kabu.Star Adventure.desktoppetmemo",
+    "productName": "星游记",
+    "files": [
+      "src/**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./icon.ico"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
