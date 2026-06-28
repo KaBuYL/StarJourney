@@ -3,7 +3,7 @@
 A lightweight desktop pet widget built with Electron. The pet sits on top of your screen and transforms into a checkbox memo with a completion history.
 
 ## Preview
-<div align="center"> <img src=".exe.png" width="400" alt="StarJourney Desktop Pet Screenshot"> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/ce37c3e2-ab2b-4aca-8eeb-1673fbd4c154" width="300" alt="StarJourney Desktop Pet Screenshot"> </div>
 
 ## Features
 
