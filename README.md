@@ -2,6 +2,9 @@
 
 A lightweight desktop pet widget built with Electron. The pet sits on top of your screen and transforms into a checkbox memo with a completion history.
 
+## Preview
+<div align="center"> <img src=".exe.png" width="400" alt="StarJourney Desktop Pet Screenshot"> </div>
+
 ## Features
 
 - Floating, frameless, always-on-top desktop pet
